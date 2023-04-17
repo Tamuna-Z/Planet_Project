@@ -11,7 +11,7 @@ export const Container = styled.div`
 export const Text = styled.h1`
 font-size:28px;
 line-height:36.23px:
-color: #fff;
+font-color: #fff;
 letter-spacing:-1.05px;
 `;
 export const Image = styled.img`

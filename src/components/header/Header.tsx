@@ -1,8 +1,8 @@
 
 import React from 'react';
-import MercuryPlanet from "../../images/planet-mercury.svg";
+// import MercuryPlanet from "../../images/planet-mercury.svg";
 import { Container,Text,Image } from './Header.styled';
-import menu from "../../components/../images/icon-hamburger.svg"
+// import menu from "../../images/planet-mercury.svg";
 
 
  function Header(props:any) {
@@ -10,7 +10,7 @@ import menu from "../../components/../images/icon-hamburger.svg"
   <Container>
     <Text>THE PLANETS</Text>
     
-    <Image  src={menu}/>
+    {/* <Image  src={menu}/> */}
   </Container>
 
 );
