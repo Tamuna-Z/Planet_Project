@@ -1,19 +1,19 @@
-
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import planets from "./data.json";
-import './App.css';
-import Content from './components/contents/Content';
-import styled,{ThemeProvider} from "styled-components";
+import Content from "./components/contents/Content";
+import styled, { ThemeProvider } from "styled-components";
 import GlobalStyles from "./components/styles/Global";
-import{
+import {
   createBrowserRouter,
   createRoutesFromElements,
   Navigate,
   Route,
-  RouterProvider} from "react-router-dom";
+  RouterProvider,
+} from "react-router-dom";
+import Info from "./info/Info";
 
 function App() {
-  const [name, setName]=useState<string>("Mercury");
+  const [name, setName] = useState<string>("Mercury");
   const [theme,setTheme]=useState({
     main:"419EBB",
     black:"#070724",
@@ -25,35 +25,33 @@ function App() {
     surface:false,
   });
 
-  const router=createBrowserRouter(
+  const router = createBrowserRouter(
     createRoutesFromElements(
       <>
-      <Route path="/" element ={<Navigate to="/Mercury"/>}/>
-      <Route 
-      path="/:name"
-      element ={
-        <Content 
-        theme={theme}
-        setTheme={setTheme}
-        name={name}
-        setName={setName}
-        data={planets}
+        <Route path="/" element ={<Navigate to="/Mercury"/>}/>
+
+        <Route
+          path="/:name"
+          element={
+            <Content
+              theme={theme}
+              setTheme={setTheme}
+              name={name}
+              setName={setName}
+              data={planets}
+            />
+          }
         />
-      }
-      />
       </>
-      
     )
-  )
+  );
   return (
-  
-  <ThemeProvider theme={theme}>
-    <GlobalStyles/>
-    <RouterProvider router={router}/>
-  </ThemeProvider>
-       
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+
+      <RouterProvider router={router} />
+    </ThemeProvider>
   );
 }
 
 export default App;
-

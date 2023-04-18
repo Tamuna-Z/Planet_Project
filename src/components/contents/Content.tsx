@@ -23,16 +23,16 @@ export default function Content(props:any){
                                 <ImageBox color ={planet.color}/>
                                 <Text>
                                     <Link 
-                                    onClick={(e) =>{
-                                        setDisplay(!display);
-                                        props.setName(planet.name);
-                                        setImage(planet.image.planet);
-                                        setSurface(false);
-                                        setText(planet.overview.content);
-                                        props.setTheme({...props.theme,main:`${planet.color}`});
-                                    }}
+                                    // onClick={(e) =>{
+                                    //     setDisplay(!display);n
+                                    //     props.setName(planet.name);
+                                    //     setImage(planet.image.planet);
+                                    //     setSurface(false);
+                                    //     setText(planet.overview.content);
+                                    //     props.setTheme({...props.theme,main:`${planet.color}`});
+                                    // }}
                                     key={planet.name}
-                                    to={"`${planet.name}`"}>
+                                    to={"/:`${planet.name}`"}>
                                         <LinkBox>{planet.name}</LinkBox>
                                     </Link>
                                 </Text>
